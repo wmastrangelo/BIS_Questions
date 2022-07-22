@@ -64,10 +64,14 @@ public class WordCount {
 
     // Forces all letters to lowercase
     public static String cleanString(String str) {
-        String cleaned = str.replaceAll("\\p{Punct}", "").trim().toLowerCase();
+        // String cleaned = str.replaceAll("\\p{Punct}", "").trim().toLowerCase();
+        String cleaned = str.toLowerCase();
         return cleaned;
     }
 
+    // Find if the word is already stored in the ArrayList
+    // Returns index of word if found, returns -1 if that word does not exist in
+    // ArrayList
     public static int indexOfString(ArrayList<Word> words, String s) {
         for (int i = 0; i < words.size(); i++) {
             if (words.get(i).getString().equals(s)) {
@@ -79,7 +83,9 @@ public class WordCount {
 
 }
 
-class Word implements Comparable {
+// Object that holds words and their frequency
+// Comparable allows for use of Collections.sort()
+class Word implements Comparable<Word> {
     private String string;
     private int count;
 
@@ -113,9 +119,11 @@ class Word implements Comparable {
         this.count = c;
     }
 
+    // Tells Collections.sort() what field to sort on
+    // Sorts in descending order
     @Override
-    public int compareTo(Object compares) {
-        int compareCount = ((Word) compares).getCount();
+    public int compareTo(Word compares) {
+        int compareCount = compares.getCount();
 
         return compareCount - this.count;
 
