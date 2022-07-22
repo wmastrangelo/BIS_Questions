@@ -1,0 +1,15 @@
+Golang Fibonacci
+
+On the back-end team at BIS, we utilize Go as our language of choice for day-to-day work. It's a statically-typed language that's simple to learn and very powerful.
+
+Problem
+
+Write a program, in Go, that will produce the first n Fibonacci numbers.
+Fibonacci numbers form a sequence such that each number is the sum of the two preceding numbers, starting with 0 and 1. There are a few different ways to implement a function that generates the Fibonacci sequence including, but not limited to, recursion and storing results. Feel free to choose whichever method you'd like, just make sure you have a reason for doing so.
+Please utilize https://go.dev/play/ to write and test this program.
+
+Example
+
+Function call: Fibonacci(10)
+Function output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
+

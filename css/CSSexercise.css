@@ -1,0 +1,97 @@
+div {
+  border: 1px solid black;
+}
+
+.container {
+  display: flex;
+}
+
+.number {
+  height: 90vh;
+  width: 33vw;
+  text-align: center;
+
+}
+
+#one {
+  background-color: yellow;
+  animation-name: bkgColor;
+  animation-iteration-count: infinite;
+  animation-duration: 3000ms;
+}
+
+#one h1 {
+  margin-top: 35vh;
+}
+
+#two h1 {
+  animation-name: spin;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+
+  margin-top: 35vh;
+}
+
+#three {
+  background-color: blue;
+}
+
+#three h1 {
+  color: white;
+  animation-name: textSlide;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+/*  Changes background color between yellow and white
+    Changes text color to match background */
+@keyframes bkgColor { 
+  0% {
+    background-color: yellow;
+    color: black;
+  }
+
+  80% {
+    background-color: blue;
+    color: white;
+  }
+
+  
+}
+
+/* Spins element clockwise around its center axis */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Slides element down and pauses at vertical middle
+   Font color changes when passing through vertical middle */
+
+@keyframes textSlide {
+  0% {
+    margin-top: 5vh;
+    color: white;
+  }
+
+  40% {
+    margin-top: 35vh;
+    color: black;
+  }
+
+  66% {
+    margin-top: 75vh;
+    color: white;
+  }
+
+  80% {
+    color: black;
+  }
+
+}

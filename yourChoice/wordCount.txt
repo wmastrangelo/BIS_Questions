@@ -1,0 +1,31 @@
+Word Count
+
+Write a program to count the frequencies of unique words from standard input, then print them out with their frequencies, ordered most frequent to least frequent.
+
+
+Example
+
+Given this input:
+The foo the foo the
+defenestration the
+
+The program should print the following:
+the 4
+foo 2
+defenestration 1
+
+
+Input File
+
+https://www.gutenberg.org/files/1/1-0.txt
+
+
+Constraints
+
+The program must normalize words to lowercase, so "The the THE" should appear as "the 3" in the output
+A word is anything separated by whitespace - ignore punctuation
+It's okay to only support ASCII for the whitespace handling and lowercase operation
+If the frequency of two words is the same, their order in the output doesn't matter
+The program should run in a single thread on a single machine
+Don't read the whole file into memory
+Use only the language's standard library functions
